@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% with messages = get_flashed_messages(with_categories = true) %}
+    {% if messages %}
+        {% for cat, msg in messages %}
+            {% if cat == 'user-created' or cat == 'auth-success' %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ msg }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+<div class="container">
+    <header class="row"><!-- Header Image Here -->
+        <div class="col-12 col-md-6">
+            <img src="https://res.cloudinary.com/dvavaunrm/image/upload/c_scale,h_750,w_400/v1635010901/How_to_watch_every_MCU_movie_in_chronological_order_on_Disney_Plus_dk34uw.jpg" alt="Placeholder" class="header-image">
+        </div>
+        <div class="col-12 col-md-6">
+            <img src="https://res.cloudinary.com/dvavaunrm/image/upload/c_scale,h_750,w_400/v1635010902/Avengers_assemble_in_22_Infinity_War_character_posters_rumn5c.jpg" alt="Placeholder" class="header-image">
+        </div>
+    </header>
+    <!-- Header Section End -->
+    <!-- Start of Middle Section -->
+    <section class="row">
+        <div class="col-12" id="middle-text">
+            <h2>Track info on your Hero!</h2>
+            <p>Come check them out</p>
+        </div>
+    </section>
+    <!-- End of Middle Section -->
+    <!-- Start of Features Section -->
+    <section class="row" id="features-section">
+        <div class="col-4 col-md-4">
+            <img src="https://res.cloudinary.com/dvavaunrm/image/upload/c_scale,h_200,w_200/v1635010551/iron-man-g347628995_640_qpybyv.png" alt="Placeholder" id="api-image">
+            <h4>Dedicated Employees!</h4>
+        </div>
+        <div class="col-4 col-md-4">
+            <img src="https://res.cloudinary.com/dvavaunrm/image/upload/c_scale,h_200,w_200/v1635010906/10_Peli%CC%81culas_de_superhe%CC%81roes_que_puedes_ver_en_HBO_GO_ahhkia.jpg" alt="Placeholder" id="graphql-image">
+            <h4>Best Hero Collection!</h4>
+        </div>
+        <div class="col-4 col-md-4">
+            <img src="https://res.cloudinary.com/dvavaunrm/image/upload/c_scale,h_200,w_200/v1635010901/Box_Office__Captain_Marvel_Powering_to_155M-Plus_Debut_abmdji.jpg" alt="Placeholder" id="database-image">
+            <h4>Backed by the best!</h4>
+        </div>
+    </section>
+    <section class="row" id="features-section">
+        <div class="col-4 col-md-4">
+            <img src="https://res.cloudinary.com/dvavaunrm/image/upload/c_scale,h_200,w_200/v1635010549/pexels-erik-mclean-7768663_lv75ux.jpg" alt="Placeholder" id="api-image">
+            <h4>Collect them all!</h4>
+        </div>
+        <div class="col-4 col-md-4">
+            <img src="https://res.cloudinary.com/dvavaunrm/image/upload/c_scale,h_200,w_200/v1635010550/captain-america-g40c408906_640_nyih5h.png" alt="Placeholder" id="graphql-image">
+            <h4>Best Hero's Around!</h4>
+        </div>
+        <div class="col-4 col-md-4">
+            <img src="https://res.cloudinary.com/dvavaunrm/image/upload/c_scale,h_200,w_200/v1635010558/spiderman-g642d91182_640_h4vcqe.jpg" alt="Placeholder" id="database-image">
+            <h4>New Available daily</h4>
+        </div>
+    </section>
+    
+    <!-- End of Features -->
+    <!-- Start of Community -->
+    <section class="row">
+        <div class="col-12 col-md-6">
+            <h4>Community backed Service</h4>
+            <p>
+                Rated best in the Community!
+            </p>
+            <div>
+                <button class="btn btn-primary">View Hero's</button>
+                <button class="btn btn-primary">Join our Community page</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <img src="https://res.cloudinary.com/dvavaunrm/image/upload/c_scale,h_500,w_750/v1635010563/ironman-gff294b87e_640_zmyt0t.jpg" alt="Placeholder" id="drone-image">
+        </div>
+    </section>
+    <!-- End of Community -->
+    <!-- Start of footer -->
+    <footer class="row" id="footer">
+
+        <div class="col-4 col-md-4">
+            <div class="footer-text-flex">
+                <h4>Ease of service</h4>
+                <p>Customer Reviews</p>
+                <p>Our Mission</p>
+                <p>Always revolving inventory</p>
+                <p>Spread the Word</p>
+                <p>Our Process</p>
+            </div>
+        </div>
+        <div class="col-4 col-md-4">
+            <div class="footer-text-flex">
+                <h4>Ease of service</h4>
+                <p>Customer Reviews</p>
+                <p>Our Mission</p>
+                <p>Always revolving inventory</p>
+                <p>Spread the Word</p>
+                <p>Our Process</p>
+            </div>
+        </div>
+        <div class="col-4 col-md-4">
+            <div class="footer-text-flex">
+                <h4>Ease of service</h4>
+                <p>Customer Reviews</p>
+                <p>Our Mission</p>
+                <p>Always revolving inventory</p>
+                <p>Spread the Word</p>
+                <p>Our Process</p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+{% endblock content %}
